@@ -15,7 +15,7 @@ def send(port, message):
   for ip in addresses:
     try:
       sock.sendto(message, (ip, port))
-    except socket.error:
+    except socket.error as e:
       pass
 
 def receive(port, react_fn):

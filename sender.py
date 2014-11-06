@@ -37,4 +37,4 @@ def to_tones(message):
 
 while True:
   for tone in to_tones(raw_input(name + ": ")):
-    base.send(port, name + ",5," + str(tone))
+    base.send(port, name + ",10," + str(tone))
