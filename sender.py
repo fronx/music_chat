@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import base
+import time
 
 port = 5001
 name = raw_input("wie heißt du? ")
 
 def to_tone(key):
-  tone = 10000
   try:
     tone = {"q":  170
            ,"a":  200
@@ -27,14 +27,15 @@ def to_tone(key):
            ,"l": 1700
            ,"l": 1800
            }[key]
-  except:
-    pass
-  finally:
     return tone
+  except:
+    return None
 
 def to_tones(message):
   return [ to_tone(key) for key in message ]
 
 while True:
   for tone in to_tones(raw_input(name + ": ")):
-    base.send(port, name + ",10," + str(tone))
+    if tone:
+      base.send(port, name + ",10," + str(tone))
+    time.sleep(0.1)
