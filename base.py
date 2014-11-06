@@ -33,4 +33,4 @@ def receive(port, react_fn):
 def play(length, frequency):
   cmd = 'play --null --channels 1 synth %s sine %s 2&>/dev/null' % (length, frequency)
   print(cmd)
-  base.run(cmd)
+  run(cmd)
