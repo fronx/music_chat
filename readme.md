@@ -1,5 +1,7 @@
 # music chat
 
+make music by sending chat messages to each other on your local network.
+
 ## installation
 
 the program only runs on mac os.
@@ -7,3 +9,31 @@ the program only runs on mac os.
 you need to install the sox library:
 
 `brew install sox`
+
+## run
+
+there are three programs: the player, the sender, and the looper.
+
+start the player in one terminal and the sender.
+
+````
+python player.py
+````
+
+````
+python sender.py
+````
+
+after picking a name for yourself, type a message on the sender side and send it off by pressing enter. the player will receive it and play it as sounds.
+
+run these programs on as many computers as you want.
+
+make music.
+
+## if it doesn't work
+
+the ip address range is hard-coded in base.py. if your local ip addresses are different, change it in the code.
+
+## i don't like it
+
+oh. sorry. order a pizza and watch a movie maybe?
