@@ -14,7 +14,7 @@ you need to install the sox library:
 
 there are three programs: the player, the sender, and the looper.
 
-start the player in one terminal and the sender.
+start the player in one terminal and the sender in another.
 
 ````
 python player.py
