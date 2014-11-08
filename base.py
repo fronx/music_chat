@@ -39,6 +39,7 @@ def receive(port, react_fn):
   """
   sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
   ip = "0.0.0.0"
+  print("empfänger lauscht auf %s" % _ip_address())
   sock.bind((ip, port))
   while True:
     data, addr = sock.recvfrom(100)
